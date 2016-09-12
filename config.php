@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost:3306";
-$username = "u629640469_abk";
-$password = "Quiz123!@#";
+$username = "root";
+$password = "";
 
 // Create connection
-$db= new PDO('mysql:host=localhost;dbname=u629640469_sdb;charset=utf8', $username, $password);
+$db= new PDO('mysql:host=localhost;dbname=surveyproject;charset=utf8', $username, $password);
 
 
 ?>	

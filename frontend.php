@@ -310,7 +310,7 @@ function loadQuestion(questionList,currentSectionName)
 						{
 						htmlContent+=preText.replace(/optOPTNO/g,'opts'+currentSectionName.replace(" ","_").replace(".","__")+'q'+c+x).replace(/optQSNO/g,'opts'+currentSectionName.replace(" ","_").replace(".","__")+c);
 						}
-						htmlContent+=question.optionsArray[x].optionText;
+						htmlContent+=question.optionsArray[x].optionText.replace("	 "," ");
 						htmlContent+=postText;
 					}
 					htmlContent+=footer;
@@ -443,7 +443,7 @@ function saveDraft()
 		month = '0'+(m+1);
 	else
 		month = (m+1);
-	download(map['templateName']+'_'+date.getDate()+'_'+month+'_'+date.getFullYear()+'.txt',JSON.stringify(map));
+	download(map['templateName']+'_'+date.getDate()+'_'+month+'_'+date.getFullYear()+'.txt',JSON.stringify(map).replace("\\t",""));
 
 
 }
